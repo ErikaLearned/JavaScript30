@@ -45,6 +45,8 @@
       <kbd>L</kbd>
       <span class="sound">tink</span>
     </div>
+	
+	<!-- TODO: add space key -->
   </div>
 
   <audio data-key="65" src="sounds/clap.wav"></audio>
@@ -88,6 +90,13 @@
 	keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 	
 	window.addEventListener('keydown', playSound);
+	
+	
+	// TODO: function to save each key code in an array
+	// TODO: when space key is clicked start function that takes in the key code array
+	// TODO: function that takes in array and plays each element with 1 second delay
+	// TODO: clear the key code array
+	
 </script>
 
 
