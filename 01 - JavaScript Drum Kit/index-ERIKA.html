@@ -65,6 +65,8 @@
 		if(!audio) return;
 		// display the key code
 		console.log(audio);
+		// start of audio file
+		audio.currentTime = 0;
 		// play the audio file
 		audio.play();
 	});
