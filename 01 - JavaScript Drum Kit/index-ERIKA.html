@@ -72,9 +72,19 @@
 		audio.currentTime = 0;
 		// play the audio file
 		audio.play();
-		// make key clicked glow
+		// make .key visibly change
 		key.classList.add('playing');
 	});
+	
+	function removeTransition(e) {
+		// display the events
+		console.log(e);
+	}
+	
+	// grab all with class key
+	const keys = document.querySelectorAll('.key');
+	// add event listener that listens for transitionend then uses removeTransition
+	keys.forEach(keys => key.addEventListener('transitionend', removeTransition));
 </script>
 
 
