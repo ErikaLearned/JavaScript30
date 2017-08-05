@@ -74,6 +74,8 @@
 	});
 	
 	function removeTransition(e) {
+		// stop function if the transition does not inclue a transform
+		if(e.propertyName !== 'transform') return;
 		// display the events
 		console.log(e);
 	}
