@@ -75,9 +75,11 @@
 	
 	function removeTransition(e) {
 		// stop function if the transition does not inclue a transform
-		if(e.propertyName !== 'transform') return;
+		if (e.propertyName !== 'transform') return;
 		// display the events
 		console.log(e);
+		// remove playing from this (key)
+		this.classList.remove('playing');
 	}
 	
 	// grab all with class key
