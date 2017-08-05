@@ -60,11 +60,14 @@
 <script>
 	window.addEventListener('keydown', function(e) {
 		// retrieve key code that matches the audio data-key
-		const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); 
+		const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+		// retrieve based on class .key
+		const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
 		// if there is no match, return
 		if(!audio) return;
-		// display the key code
+		// display the key code from audio and from .key
 		console.log(audio);
+		console.log(key);
 		// start of audio file
 		audio.currentTime = 0;
 		// play the audio file
