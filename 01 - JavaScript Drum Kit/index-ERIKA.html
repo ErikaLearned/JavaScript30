@@ -59,7 +59,11 @@
 
 <script>
 	window.addEventListener('keydown', function(e) {
-		const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+		// retrieve key code that matches the audio data-key
+		const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); 
+		// if there is no match, return
+		if(!audio) return;
+		// display the key code
 		console.log(audio);
 	});
 </script>
